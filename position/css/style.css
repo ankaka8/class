@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ol,ul,li{list-style: none;}
+
+
+.clear::after{content: ""; clear: both;
+    display: block;}
+
+
+#전체 {
+    /* id를 부를때는 .대신 #으로 호출함 */
+    background-color: black;
+    padding: 20px;
+    width: 800px;
+    margin: 0 auto;
+
+}
+
+#전체 .첫째자식 {
+    background-color: grey;
+    padding: 20px;
+}
+
+#전체 .첫째자식 .wrap {
+    position: relative;
+}
+
+#전체 .첫째자식 .첫째손자 {
+    background-color: palevioletred;
+    height: 200px;
+    /* opacity=투명도 */
+    background-image: url(../image/image.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+#전체 .첫째자식 .첫손2 {
+    background-color: green;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    transition: 0.3s;
+    opacity: 0;
+    background-image: url(../image/image2.jpg);
+
+}
+
+#전체 .첫째자식:hover .첫손2 {
+    opacity: 1;
+}
+
+#전체 .둘째자식{
+    background-color: gold;
+    margin-top: 30px;
+    height: 200px;
+    padding: 20px;
+    /* 강제로 기본값을주기전에는 설정이 자동으로 잡힌다 (필요시 넓이 잡아줄것) */
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+#전체 .둘째자식 .둘째손자{
+    background-color: cadetblue;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0; top: 0; 
+     /* width-는 기본값으로 따라옴 (블록요소이기때문) */
+/* 자식은 부모의 padding에 침범할수없다 */
+}
+
+
+
+#전체 .둘째자식{
+margin-bottom: 30px;
+}
+
+
+#전체 .셋째자식{
+    background-color: pink;
+    margin-top: 30px;
+    /* margin을 두div가"위/아래"로 값을 적용할경우 큰 값을 우선적용된다 
+    BUT !! 좌우는 marging값이 합쳐져서 적용이 됨!!!!*/
+}
+
+
+#전체 .셋째자식>div{
+    background-color: darkgray;
+    width: 45%;
+    margin: 0.5%;
+    float: left;
+       }
+
+
+   /* ol ul의 자식요소는 li만가능합니다 */
+   #전체 .셋째자식 .div ol{
+    list-style-type: upper-roman;
+   }
+   #전체 .셋째자식 .div ul{
+    list-style-type: circle;
+   }
+
+#전체 .셋째자식>div li{
+    border: 1px solid rebeccapurple
+}
+
+#전체 .넷째자식{
+    background-color: beige;
+    margin-top: 30px;
+    padding: 20px;
+}
+#전체 .넷째자식 .넷째손자{
+     background-color: aqua;
+}
+#전체 .넷째자식 .넷째손자 dd{
+    background-color: brown;
+}

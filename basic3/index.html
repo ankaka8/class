@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Style은 CSS (주석표기모양이조금다름) */
+div{color:blue}
+div.순둥이{color:chocolate}
+.예쁜이{color:aquamarine}
+.멋쟁이{color:chartreuse}
+.넷째 .넷째자식{color:darkgray}
+
+.넷째 div{
+    background-color: palegoldenrod; /* 배경색 */
+    border:red solid 2px;
+    padding: 10px
+}
+.넷째>div{border-color: green}
+
+.막내{margin-top: 50px;}
+.막내 div{border:red solid 2px;
+padding:10px}
+/* border-color: green */
+
+.막내>div{border-color:green
+}
+
+.막내 .막내자식 .막손자{
+background-color:palevioletred
+}
+
+.막내 .막내자식.막자2 .막손자
+{
+background-color:yellow
+}
+
+/* 띄워쓰기---> 자손
+       --->자식 
+       명령문이 이어질때는 세미콜론은 항상 */
+       
+</style>
+</head>
+
+<body>
+ <div class="순둥이">첫번째줄입니다 </div>   
+ <!-- alt + shift +↓ = 한줄복사  
+alt+↑ = 이동-->
+  <div class="예쁜이">두번쨰줄입니다 </div>   
+  <div class="멋쟁이">세번째줄입니다 </div>   
+  <div class="넷째"> 
+    <div class="넷째자식">넷째자식1</div>
+    <div class="넷째자식">넷째자식2</div>
+    <div class="넷째자식">
+        <div class="넷째손자">넷째의손자</div>
+    </div>
+  </div>  
+  <div class="막내">
+<div class="막내자식 막자1">
+    <div class="막손자">막손자1</div>
+    <div class="막손자">막손자2</div>
+</div>
+<div class="막내자식 막자2">
+<div class="막손자">막손자3</div>
+<div class="막손자">막손자4</div> 
+</div>
+ 
+</body>
+</html>

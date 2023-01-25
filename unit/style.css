@@ -1,0 +1,50 @@
+@charset "UFT-8";
+
+* {
+    margin: 0;
+    top: 0;
+}
+
+:root {
+    /* --(하이폰2개)속성이름:속성값 */
+    /* 변수 */
+
+   --green: #f00;
+   --padding-top10:10px;
+   --padding-bottom:10px;
+}
+
+
+.전체 {
+    font-size: 1.2em;
+}
+
+.전체 .첫째 {
+    font-size: 0.5em;
+}
+
+/* ex) 16px x12.x0.5로 계산되는거임} */
+
+.전체 .첫째 .첫손 {
+    background-color: rgb(59, 20, 231);
+    color: var(--green); 
+
+    /* 예외값적용변수 -회사에가면 이거쓰는 사수도있음*/
+    
+    height: 100vh;
+    /* v=viwport h=height =보여지는 창의 높이에 비례 */
+    /* font-size: 30vw; */
+    /* v=viewprot w =width = 보여지는 창에 넓이에 비례 */
+
+    font-size: 0.3rem;
+    padding-top: var(--padding-top10);
+}
+
+/* em= 폰트사이즈 배당안해주면 기본 16px임. */
+/* 거기서 em값을 주면 16px베이스에서 X 1.2를 곱함.. */
+
+
+/* r=root 
+  html에서 root란 html요소를 의미한다.
+  
+  html text고정값은 16px이므로, 수식의 스타트는 16px을 기준으로 적용됨. ex) 16px x 0.3 */

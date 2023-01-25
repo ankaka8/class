@@ -1,0 +1,310 @@
+@charset "UFT-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clear::after {
+    content: "";
+    clear: both;
+    display: block;
+    /* 부모가 박살나는걸 방지함 */
+}
+
+
+.전체 {
+    background-color: aquamarine;
+    width: 1000px;
+    /* 넓이 */
+    margin: 0 auto;
+    /* 중간으로 정렬할때 마진이용 */
+    /* 위에공간줄때 마진이용 */
+    margin-top: 100px;
+    padding: 30px 0;
+    /* 위아래/ 양옆 */
+}
+
+.전체 .첫째 {
+    background-color: #fff;
+    width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+    /* 중간으로 정렬할때 마진이용 */
+
+}
+
+.전체 .첫째>div {
+    background-color: rgb(76, 76, 226);
+    height: 200px;
+    width: 47.5%;
+    /* 넓이 */
+    float: left;
+    /* 정렬 */
+}
+
+.전체 .첫째 .첫손1 {
+    position: relative;
+    margin-right: 5%;
+    background-image: url(../image/image1.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.전체 .첫째 .첫손1 h4 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: gainsboro;
+    color: #222;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+
+.전체 .첫째 .첫손1 .right {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../image/image2.jpg);
+    background-size: cover;
+    transition: 0.3s;
+}
+
+.전체 .첫째 .첫손1:hover .right {
+    left: 0;
+}
+
+.전체 .첫째 .첫손2 {
+    overflow: hidden;
+    position: relative;
+}
+
+.전체 .첫째 .첫손2 video {
+    width: 120%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.전체 .둘째 {
+    background-color: blanchedalmond;
+    width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+
+.전체 .둘째>div {
+    float: left;
+    width: 22.5%;
+    height: 200px;
+    margin-left: 2%;
+    background-color: darkcyan;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.전체 .둘째 .둘자4 {
+    margin-right: 0;
+}
+
+
+.전체 .둘째>div>div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    line-height: 40px;
+
+}
+
+
+.전체 .둘째>div>div.둘손2 {
+    left: auto;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    transform: none;
+    /* 트랜스폼 설정을 none으로 잡고 시작 */
+    /* 설정뿌수고 적용하는 법 */
+}
+
+.전체 .둘째>div>div.둘손3 {
+    left: auto;
+    top: auto;
+    left: 48%;
+    bottom: 80%;
+    transform: none;
+}
+
+.전체 .둘째>div>div.둘손4 {
+    left: auto;
+    top: auto;
+    right: 0%;
+    bottom: 0%;
+    transform: none;
+}
+
+.전체 .셋째 {
+    background-color: cadetblue;
+    width: 900px;
+    margin: 0 auto;
+    /* 중간정렬시키는법 */
+    padding: 30px;
+    box-sizing: border-box;
+    /* 넘치는 박스 집어넣는 법 */
+}
+
+.전체 .셋째>div {
+    background-color: bisque;
+    width: 45%;
+    height: 200px;
+    float: left;
+}
+
+.전체 .셋째>div.세자1 {
+    margin-right: 10%;
+    position: relative;
+    overflow: hidden;
+   
+}
+
+.전체 .셋째>div.세자1>div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+.전체 .셋째>div.세자1>div h4 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255,0.3);
+    color: #fff;
+    font-size: 40px;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.전체 .셋째>div.세자1>div.세손1 {
+    background-image: url(../image/image3.jpg);
+    background-size: cover;
+    z-index: 10;
+    left: 100%;
+    transition: 0.5s;
+}
+
+.전체 .셋째>div.세자1:hover>div.세손1 {
+    left: 0;
+}
+
+.전체 .셋째>div.세자1>div.세손2 {
+    background-image: url(../image/image4.jpg);
+    background-size: cover;
+}
+
+.전체 .셋째>div.세자2{
+   overflow: hidden;
+   position: relative;
+}
+
+.전체 .셋째>div.세자2 video{
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+
+.전체 .넷찌{
+    background-color: bisque;
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 30px;
+    box-sizing: border-box;
+
+}
+.전체 .넷찌>div{
+    background-color: darkcyan;
+    width: 45%;
+    height: 250px;
+    float: left;
+}
+
+.전체 .넷찌>div.넷자1{
+    margin-right: 10%;
+    position: relative;
+    overflow: hidden;
+    
+}
+.전체 .넷찌>div.넷자1>div{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}   
+
+.전체 .넷찌>div.넷자1>div h4{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255,0.3);
+    color: #fff;
+    font-size: 40px;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.전체 .넷찌>div.넷자1>div.구구1{
+    background-image: url(../image/image1.jpg);
+    background-size: cover;
+    z-index: 10;
+    left: 100%;
+    transition: 0.5s;
+}
+
+.전체 .넷찌>div.넷자1:hover>div.구구1 {
+    left: 0;
+}
+
+.전체 .넷찌>div.넷자1>div.구구2{
+    background-image: url(../image/image2.jpg);
+    background-size: cover;
+}
+
+.전체 .넷찌>div.넷자2{
+    overflow:hidden;
+    position: relative;
+
+}
+.전체 .넷찌>div.넷자2 video{
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    width: 100%;
+}
